@@ -9,25 +9,13 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "electron:build": "vue-cli-service electron:build",
+    "electron:build:win": "vue-cli-service electron:build --win --ia32",
     "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "dist": "electron-builder"
-  },
-  "build": {
-    "appId": "yourappid",
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
-    },
-    "win": {
-      "target": "squirrel",
-      "icon": "build/icon.ico"
-    }
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "brace": "^0.11.1",
+    "electron-updater": "^4.0.6",
     "json-formatter-js": "^2.2.1",
     "vue": "^2.5.21"
   },
